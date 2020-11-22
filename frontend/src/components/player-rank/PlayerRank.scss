@@ -1,0 +1,42 @@
+.playerRankContainer {
+  .title {
+    text-align: center;
+  }
+
+  .noData {
+    text-align: center;
+  }
+
+  .rankItemContainer {
+    .rankItem {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+
+      .rank {
+        flex: 0 0 50px;
+        font-style: italic;
+        font-size: 14px;
+
+        &--bold {
+          font-weight: bold;
+        }
+      }
+
+      .name {
+        flex: 1 1 auto;
+      }
+
+      .score {
+        flex: 0 0 80px;
+        text-align: right;
+        font-size: 12px;
+      }
+    }
+
+    .split {
+      border-top: 1px solid #404553;
+      width: 100%;
+    }
+  }
+}

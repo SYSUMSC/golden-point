@@ -1,0 +1,66 @@
+.graphViewContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #636c80;
+    text-shadow: 1px 1px #494f5f, 2px 2px #494f5f, 3px 3px #494f5f, 4px 4px #494f5f;
+    margin: 0;
+    letter-spacing: 16px;
+    font-size: 64px;
+    user-select: none;
+    z-index: -10;
+  }
+
+  .point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+
+    .dotCaption {
+      transform: translateX(-50%);
+      font-size: 12px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: lightgray;
+      margin: 0 auto;
+      box-shadow: 0 0 8px #9f9f9f;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 0 6px #ababab);
+    }
+  }
+
+  .point--gold {
+    z-index: -1;
+
+    .dot {
+      width: 24px !important;
+      height: 24px !important;
+      background-color: gold !important;
+      animation: 800ms linear 0s infinite alternate shining;
+
+      @keyframes shining {
+        from {
+          box-shadow: 1px 1px #b3830d, 0 0 16px goldenrod, 0 0 16px #7e5f12;
+        }
+        to {
+          box-shadow: 1px 1px #b3830d, 0 0 8px goldenrod, 0 0 16px #7e5f12;
+        }
+      }
+    }
+  }
+}

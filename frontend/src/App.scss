@@ -1,0 +1,52 @@
+.rootContainer {
+  flex-grow: 1;
+  padding: 24px;
+  display: flex;
+
+  .rankContainer {
+    flex: 0 0 240px;
+    overflow-y: auto;
+    padding-right: 8px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #282c34;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #474e5d;
+      border-radius: 3px;
+    }
+  }
+
+  .mainContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .topContainer {
+      flex: 0 0 auto;
+      min-width: 400px;
+      max-width: 650px;
+      margin: 24px auto;
+
+      .topControlContainer {
+        display: flex;
+        align-items: flex-start;
+
+        & > * {
+          flex: 1 1 auto;
+        }
+      }
+    }
+
+    .graphContainer {
+      flex-grow: 1;
+      width: 100%;
+      margin: 24px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.controlContainer {
+  display: flex;
+  align-items: flex-end;
+  padding: 7px 0;
+
+  .slider {
+    flex: 1 1 auto;
+  }
+
+  .button {
+    flex: 0 0 auto;
+  }
+}

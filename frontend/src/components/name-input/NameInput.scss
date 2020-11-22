@@ -1,0 +1,11 @@
+.controlContainer {
+  display: flex;
+
+  .textField {
+    flex: 1 1 auto;
+  }
+
+  .button {
+    flex: 0 0 auto;
+  }
+}

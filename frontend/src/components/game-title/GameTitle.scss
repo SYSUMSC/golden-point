@@ -1,0 +1,43 @@
+.gameTitleContainer {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 12px;
+  user-select: none;
+
+  .title {
+    margin: 0;
+
+    & > span:not(:last-child) {
+      padding-right: 2px;
+    }
+
+    @keyframes titleShining {
+      from {
+        text-shadow: 1px 1px #b3830d, 0 0 16px goldenrod, 0 0 16px #7e5f12;
+      }
+      to {
+        text-shadow: 1px 1px #b3830d, 0 0 8px goldenrod, 0 0 16px #7e5f12;
+      }
+    }
+
+    & > span {
+      color: gold;
+      animation: 800ms linear 0s infinite alternate titleShining;
+    }
+
+    & > span:nth-child(2n) {
+      animation-delay: 300ms;
+    }
+
+    & > span:nth-child(3n) {
+      animation-delay: 600ms;
+    }
+  }
+
+  .subTitle {
+    margin: 0;
+    letter-spacing: 2px;
+    padding: 0 0 2px 8px;
+    font-style: italic;
+  }
+}
